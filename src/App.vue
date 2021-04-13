@@ -2,18 +2,21 @@
   <div id="app">
     <Header class="header" title="Framework Vue" />
     <NavBar :items="menus" />
+    <Article :articles="articles" />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import Article from "./components/Article";
 
 export default {
   name: "App",
   components: {
-    NavBar,
     Header,
+    NavBar,
+    Article,
   },
   data() {
     return {
@@ -21,6 +24,23 @@ export default {
         { text: "Home", link: "home.html" },
         { text: "Sobre", link: "sobre.html" },
         { text: "Contato", link: "contato.html" },
+      ],
+      articles: [
+        {
+          title: "Title 1",
+          text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique nisl vitae mi interdum, vel vehicula nisl rutrum. Etiam at nunc justo. Donec vel lectus suscipit urna pretium aliquet. Praesent in mattis nunc. Nunc blandit accumsan sapien, pellentesque euismod libero sollicitudin nec. Morbi bibendum eget enim id luctus",
+        },
+        {
+          title: "Title 2",
+          text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique nisl vitae mi interdum, vel vehicula nisl rutrum. Etiam at nunc justo. Donec vel lectus suscipit urna pretium aliquet. Praesent in mattis nunc. Nunc blandit accumsan sapien, pellentesque euismod libero sollicitudin nec. Morbi bibendum eget enim id luctus",
+        },
+        {
+          title: "Title 3",
+          text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique nisl vitae mi interdum, vel vehicula nisl rutrum. Etiam at nunc justo. Donec vel lectus suscipit urna pretium aliquet. Praesent in mattis nunc. Nunc blandit accumsan sapien, pellentesque euismod libero sollicitudin nec. Morbi bibendum eget enim id luctus",
+        },
       ],
     };
   },
@@ -72,5 +92,13 @@ li a:hover:not(.active) {
 li a.active {
   color: white;
   background-color: #4caf50;
+}
+
+article {
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid;
+  -webkit-box-shadow: 1px 4px 3px 1px rgba(0, 0, 0, 0.59);
+  box-shadow: 1px 4px 3px 1px rgba(0, 0, 0, 0.59);
 }
 </style>

@@ -6,9 +6,9 @@
 
 <script>
 export default {
+  name: "NavBarItems",
   props: {
-    item: String,
-    link: String,
+    item: String
   },
 };
 </script>
