@@ -1,4 +1,4 @@
-# exercicio-01
+# Vue Framework - exercicio-01
 
 ## Project setup
 ```
